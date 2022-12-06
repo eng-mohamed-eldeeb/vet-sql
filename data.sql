@@ -12,6 +12,3 @@ INSERT INTO animals VALUES (DEFAULT, 'Boarmon', '2005-06-07', 7, '1', 20.4);
 INSERT INTO animals VALUES (DEFAULT, 'Blossom', '1998-10-13', 3, '1', 17);
 INSERT INTO animals VALUES (DEFAULT, 'Ditto', '2022-05-14', 4, '1', 22);
 
--- Add species to the table
-ALTER TABLE animals
-ADD species varchar(20)

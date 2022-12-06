@@ -55,6 +55,7 @@ SELECT name, species from animals;
 -- delete the records
 BEGIN;
 DELETE FROM animals;
+select * from animals;
 ROLLBACK;
 
 SELECT * from animals;
