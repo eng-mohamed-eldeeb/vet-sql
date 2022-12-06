@@ -36,3 +36,7 @@ where name <> 'Gabumon';
 select *
 from animals
 where weight_kg between 10.5 and 17.3;
+
+
+-- set the species
+UPDATE animals SET species = 'unspecified';
