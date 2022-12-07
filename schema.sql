@@ -1,5 +1,5 @@
 CREATE TABLE animals (
-    id INT NOT NULL PRIMARY KEY,
+    id INT PRIMARY KEY,
     name varchar(100),
     date_of_birth date,
     escape_attempts INT,
