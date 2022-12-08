@@ -45,3 +45,22 @@ ALTER TABLE animals
     FOREIGN KEY (owner_id)
     REFERENCES owners(id)
     ON DELETE CASCADE;
+
+
+create table vets (
+  id int GENERATED ALWAYS as IDENTITY,
+  name varchar(100),
+  age int,
+  date_of_graduation date,
+  PRIMARY key(id)
+);
+
+create table specializations (
+  species_id  int,
+  vet_id int,
+  PRIMARY key(species_id, vet_id),
+  CONSTRAINT fk_species
+    FOREIGN key(species_id) REFERENCES species(id) on DELETE CASCADE,
+  CONSTRAINT fk_vets
+	  FOREIGN KEY (vet_id) REFERENCES vets (id) ON DELETE CASCADE
+);
