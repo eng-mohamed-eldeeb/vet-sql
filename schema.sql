@@ -76,3 +76,14 @@ CREATE TABLE visits (
   CONSTRAINT fk_vets_visits
 	  FOREIGN KEY (vet_id) REFERENCES vets (id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+--Update visits table to add id column
+ALTER TABLE visits ADD COLUMN id INT GENERATED ALWAYS AS IDENTITY;
+
+-- Add Non-clustered index for tables
+CREATE INDEX animal_id_index ON visits (animal_id);
+CREATE INDEX vet_id_id_index ON visits (vet_id);
+CREATE INDEX email_id_index ON owners (email);
