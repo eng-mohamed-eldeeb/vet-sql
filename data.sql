@@ -43,7 +43,7 @@ INSERT INTO vets (name, age, date_of_graduation) VALUES
   ('Jack Harkness', 38, '2008-06-08') 
 ;
 
-
+-- Insert Values into Specializations
 INSERT INTO specializations (vet_id, species_id) VALUES 
   (1, 1),
   (3, 1),
@@ -51,7 +51,7 @@ INSERT INTO specializations (vet_id, species_id) VALUES
   (4, 2)
 ;
 
-
+-- Add Records of Animal Visits
 INSERT INTO visits (animal_id, vet_id, visit_date) VALUES 
   (1, 1, '2020-05-24'),
   (1, 3, '2020-07-22'),
